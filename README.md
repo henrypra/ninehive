@@ -6,7 +6,7 @@ A MVP library for Android.
 
 ```groovy
 dependencies {
-    def ninehive_version = '0.1.0'
+    def ninehive_version = '0.2.0'
     implementation "com.github.henrypra:ninehive:$ninehive_version"
 ```
 
