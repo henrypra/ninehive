@@ -1,4 +1,4 @@
-package com.example.ninehive
+package ninehive
 
 import android.content.Context
 import android.os.Bundle

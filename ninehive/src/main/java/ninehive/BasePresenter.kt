@@ -1,4 +1,4 @@
-package com.example.ninehive
+package ninehive
 
 interface BasePresenter {
 
