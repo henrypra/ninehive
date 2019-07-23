@@ -26,11 +26,11 @@ allprojects {
 
 `MainFragment.kt`
 ```kotlin
-    fun initCalculation() {
-        if (!edt_value_one?.text.isNullOrEmpty()) {
-            presenter?.onCalculateClicked(edt_value_one?.text.toString().toDouble())
-        }
+fun initCalculation() {
+    if (!edt_value_one?.text.isNullOrEmpty()) {
+        presenter?.onCalculateClicked(edt_value_one?.text.toString().toDouble())
     }
+}
 ```
 
 `MainContract.kt`
