@@ -20,3 +20,39 @@ allprojects {
   }
 }
 ```
+
+# Usage
+
+`MainFragment.kt`
+```kotlin
+    fun initCalculation() {
+        if (!edt_value_one?.text.isNullOrEmpty()) {
+            presenter?.onCalculateClicked(edt_value_one?.text.toString().toDouble())
+        }
+    }
+```
+
+`MainContract.kt`
+```kotlin
+interface MainContract {
+    interface Presenter : BasePresenter {
+        fun onCalculateClicked(euro: Double?)
+    }
+
+    interface View : BaseView<Presenter> {
+        fun displayResult(dollar: Double?)
+    }
+
+}
+
+```
+
+`MainPresenter.kt`
+```kotlin
+    private val excRate = 1.12085
+
+    override fun onCalculateClicked(euro: Double?) {
+        view.displayResult(euro?.times(excRate))
+    }
+
+```
