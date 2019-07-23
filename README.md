@@ -8,6 +8,7 @@ A MVP library for Android.
 dependencies {
     def ninehive_version = '0.2.0'
     implementation "com.github.henrypra:ninehive:$ninehive_version"
+}
 ```
 
 You also have to add the url in your root build.gradle at the end of the repositories:
@@ -49,10 +50,10 @@ interface MainContract {
 
 `MainPresenter.kt`
 ```kotlin
-    private val excRate = 1.12085
+private val excRate = 1.12085
 
-    override fun onCalculateClicked(euro: Double?) {
-        view.displayResult(euro?.times(excRate))
-    }
+override fun onCalculateClicked(euro: Double?) {
+    view.displayResult(euro?.times(excRate))
+}
 
 ```
