@@ -31,6 +31,10 @@ fun initCalculation() {
         presenter?.onCalculateClicked(edt_value_one?.text.toString().toDouble())
     }
 }
+
+override fun displayResult(dollar: Double?) {
+    tv_result?.text = dollar.toString()
+}
 ```
 
 `MainContract.kt`
